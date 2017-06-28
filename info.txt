@@ -1,0 +1,33 @@
+curl https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json
+curl https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.csv
+curl https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json
+
+https://github.com/erans/ec2instancespricing/blob/master/ec2instancespricing/ec2instancespricing.py
+http://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_spot_price_history
+https://aws.amazon.com/ebs/pricing/
+
+Amazon EBS General Purpose SSD (gp2) volumes
+    $0.10 per GB-month of provisioned storage
+
+Amazon EBS Provisioned IOPS SSD (io1) volumes
+    $0.125 per GB-month of provisioned storage
+    $0.065 per provisioned IOPS-month
+
+
+>>> boto3.client('ec2').describe_reserved_instances_offerings()
+
+
+EC2
+EBS
+Snapshots
+Network
+Utilization
+
+Query costs regularly
+  Build timeline of cost for each service over time
+
+Enumerate all resources currently running
+  Keep track of list of resources over time
+
+Integrate cost over time for all resources
+Split resources by type, team, purpose etc
